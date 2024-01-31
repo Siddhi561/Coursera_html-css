@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Little Lemon - Book</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+
+    <meta name="description" content="A brief description">
+    <meta name="author" content="Little Lemon Restaurant">
+
+    <meta property="og:title" content="Book">
+    <meta property="og:type"  content="website">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url"   content="https://littlelemon/">
+    <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Little Lemon">
+
+    <link rel="stylesheet" href="styles.css">
+	<style>
+	#vv{ font-size: 1.5rem;
+	text-transform: capitalize;
+	}                
+
+input{		width:200px;
+margin-top:20px;
+					margin-left:8px;
+                    border: 0;
+                    outline: 0;
+                    color: rgb(60, 66, 87);
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    padding: 4px 8px;
+                    min-height: 28px;
+                    vertical-align: middle;
+                    transition: background-color .24s,box-shadow .24s;
+                    transition-property: background-color, box-shadow;
+                    transition-duration: 0.24s, 0.24s;
+                    transition-timing-function: ease, ease;
+                    transition-delay: 0s, 0s;
+                    :focus{
+                        box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+                    }
+    
+	}
+	
+	button{
+                   
+                    display: inline-block;
+                    outline: 0;
+                    cursor: pointer;
+                    text-align: center;
+                    border: 1px solid #babfc3;
+                    padding: 7px 16px;
+                    min-height: 36px;
+                    min-width: 36px;
+                    color: #202223;
+                    background: #ffffff;
+                    border-radius: 4px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+                    :hover {
+                        background: #f6f6f7;
+                        outline: 1px solid transparent;
+                    }
+                
+                            
+
+                
+	</style>
+</head>
+
+<body>
+    
+    <header>
+        <img src="Asset 14@4x.png">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="menu.html"> Menu </a></li>
+            <li><a href="book.html"> Book </a></li>
+            <li><a href="about.html"> About </a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <article>
+                <div>
+                    <h1>Book</h1>
+					 <hr/>
+					 <h2>Reserve Your table</h2>
+                    
+					<p> 
+                        Reserve your table for an Italian, Greek, and Turkish dining experience.
+                    </p>
+					<span id="va" style="color:red;"></span><p id="vv" style="color:green;"></p> <br/> 
+					
+					   <label for="fname">Full Name:</label><br>
+					  <input type="text" id="fname" ><br><br>
+					    <label for="fname">Number of Persons:</label><br>
+					  <input type="number" id="pnum"  min="1" max="9" ><br><br>
+					  
+					  <button type="submit" onclick="submitForm()">Reserve Now</button>
+					
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer1">
+            <img src="Asset 18@4x.png">
+        </div>
+
+        <div class="footer2">
+            <hr>
+            <p>Copyright Little Lemon</p>
+        </div>
+    </footer>
+<script>
+function submitForm() {
+
+var fname = document.getElementById("fname").value;
+var pnumber = document.getElementById("pnum").value;
+
+if(fname!= "" && pnumber!="" ){
+		 document.getElementById("vv").innerHTML = "Dear "+fname+" You Successfully booked Table!";
+				 setTimeout(() => {
+				   document.getElementById("vv").innerHTML = " ";
+				}, 1800);
+		
+		}
+		else{
+		document.getElementById("va").innerHTML = "All Fields are required";
+		 setTimeout(() => {
+				   document.getElementById("va").innerHTML = " ";
+				}, 1800);
+		}
+}
+
+
+
+</script>
+</body>
+
+</html>
